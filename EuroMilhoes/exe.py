@@ -2,7 +2,7 @@ import os, sys, time
 from random import randint
 
 # all combinations
-allCombinations = []
+allCombinations = dict()
 
 def generate_key():
     while True:
@@ -35,7 +35,7 @@ def generate_key():
 
         # check if combination is unique
         if not combination in allCombinations:
-            allCombinations.append(combination)
+            allCombinations[combination] = combination
             break
 
 
