@@ -71,4 +71,4 @@ end_ms = time.time() * 1000
 interval = end_ms - start_ms
 
 print("\n... and finished!\n")
-print("Generated %d combinations in %d milliseconds" % (number, interval))
+print("Generated %d combination(s) in %d milliseconds" % (number, interval))
