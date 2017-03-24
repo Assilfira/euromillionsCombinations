@@ -2,4 +2,4 @@
 Python script that generate unique euromillions combinations (5 numbers + 2 stars)
 
 # Run the script
-python exe.py
+python generate.py
