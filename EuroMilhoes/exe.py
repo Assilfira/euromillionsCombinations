@@ -1,5 +1,9 @@
-import os, sys, time
+import os, sys
 from random import randint
+import time
+
+# init execution time
+start_ms = time.time() * 1000
 
 # all combinations
 allCombinations = dict()
@@ -62,3 +66,8 @@ while True:
 # conitnue with the script and generate key
 for num in range(1,(number+1)):
     print("("+str(num)+") "+generate_key())
+
+# program execution time
+end_ms = time.time() * 1000
+interval = end_ms - start_ms
+print("Program duration time: %d milliseconds" % interval)
