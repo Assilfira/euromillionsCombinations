@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 from random import randint
 
 # all combinations
