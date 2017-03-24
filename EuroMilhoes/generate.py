@@ -57,8 +57,18 @@ while True:
         print("Error. Invalid input")
 
 
+# generating combinations duration time
+start_ms = time.time() * 1000
 
+print("\nGenerating....\n")
 
 # conitnue with the script and generate key
 for num in range(1,(number+1)):
     print("("+str(num)+") "+generate_key())
+
+# end of generating combinations duration time
+end_ms = time.time() * 1000
+interval = end_ms - start_ms
+
+print("\n... and finished!\n")
+print("Generated %d combinations in %d milliseconds" % (number, interval))
