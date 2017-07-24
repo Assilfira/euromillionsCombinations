@@ -1,6 +1,9 @@
 import os, sys, time
 from random import randint
 
+# True - if you want to print to a file
+printToFile = False;
+
 # all combinations
 allCombinations = dict()
 
@@ -62,9 +65,18 @@ start_ms = time.time() * 1000
 
 print("\nGenerating....\n")
 
+if printToFile:
+    f = open('generated_keys.txt', 'w')
+
 # conitnue with the script and generate key
 for num in range(1,(number+1)):
-    print("("+str(num)+") "+generate_key())
+    if printToFile:
+        f.write("({:,}) {}\n".format(num,generate_key()))
+    else:
+        print("("+str(num)+") "+generate_key())
+
+if printToFile:
+    f.close()
 
 # end of generating combinations duration time
 end_ms = time.time() * 1000
